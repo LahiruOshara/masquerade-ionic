@@ -1,0 +1,7 @@
+{
+  "name": "Masquerade",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,44 @@
+<div class="register">
+  <h1>Register Here</h1>
+  <form (submit)="onRegisterSubmit()">
+    <p>Full Name</p>
+    <input [(ngModel)]="name" name="name" type="text" placeholder="Lahiru Hinguruduwa" required>
+    <p>E-mail</p>
+    <input [(ngModel)]="email" name="email" type="text" placeholder="something@something.com" required>
+    <p>Password</p>
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
+    <input type="submit" value="Register">
+  </form>
+</div>
+
+<div class="container-login100">
+  <div class="wrap-login100">
+    <form class="login100-form validate-form">
+      <span class="login100-form-title p-b-34 p-t-27">
+        Register Here
+      </span>
+      <span class="login100-form-logo">
+        <img src="../../assets/imgs/register.png" style="border-radius: 50%;">
+      </span>
+
+      <div class="wrap-input100 validate-input" data-validate="Enter Email">
+        <input class="input100" type="text" [(ngModel)]="email" name="email" placeholder="E-mail">
+        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+      </div>
+
+      <div class="wrap-input100 validate-input" data-validate="Enter password">
+        <input class="input100" type="password" [(ngModel)]="password" name="pass" placeholder="Password">
+        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+      </div>
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+          Register Now
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>

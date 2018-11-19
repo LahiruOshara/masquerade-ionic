@@ -1,17 +1,4 @@
-<div class="register">
-  <h1>Register Here</h1>
-  <form (submit)="onRegisterSubmit()">
-    <p>Full Name</p>
-    <input [(ngModel)]="name" name="name" type="text" placeholder="Lahiru Hinguruduwa" required>
-    <p>E-mail</p>
-    <input [(ngModel)]="email" name="email" type="text" placeholder="something@something.com" required>
-    <p>Password</p>
-    <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
-    <input type="submit" value="Register">
-  </form>
-</div>
-
-<div class="container-login100">
+<div class="container-login100" (submit)="onRegisterSubmit()">
   <div class="wrap-login100">
     <form class="login100-form validate-form">
       <span class="login100-form-title p-b-34 p-t-27">

@@ -10,10 +10,9 @@ import { AngularFireDatabase} from 'angularfire2/database';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  d_password:AngularFireList<any>
-  users: AngularFireList<any>;
-  f_email:string;
-  f_password:string;
+  email:string;
+  password:string;
+
   current_user:any;
 
   constructor(public navCtrl: NavController, 
@@ -23,15 +22,18 @@ export class LoginPage {
     ) {}
 
     onLoginSubmit(){
-        
-        this.db.list('/user', ref => ref.orderByChild('email').equalTo(this.f_email)).valueChanges().subscribe(x => {
+        console.log("onlogin");
+        this.db.list('/user', ref => ref.orderByChild('email').equalTo(this.email)).valueChanges().subscribe(x => {
           this.current_user = x[0];
-          console.log(this.current_user);
-          this.navCtrl.push('HomePage');
+          //console.log(this.current_user);
+          if(this.current_user.password!=this.password){
+            console.log("Wrong password");
+          }else{
+            this.navCtrl.push('CustomerTabPage');
+          }
       });
-    
-   
-  
+      /*console.log(this.db.list('/user'));*/
+      console.log("done")
   }
     
     gotoReg(){

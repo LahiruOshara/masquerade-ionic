@@ -1,7 +1,9 @@
 {
   "name": "Masquerade",
   "integrations": {
-    "cordova": {}
+    "cordova": {
+      "enabled": true
+    }
   },
   "type": "ionic-angular"
 }

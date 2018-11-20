@@ -62,18 +62,20 @@ export class HomePage {
 
 
   uploadImage() {
+    //Show loading
+    let loader = this.loadingCtrl.create({
+      content: "Uploading..."
+    });
+    loader.present();
     this.http.post('http://192.168.8.102:5000/upload', { "the_file": this.img }, {})
       .then(data => {
-        console.log(data.status);
-        console.log(data.data); // data received by server
-        console.log(data.headers);
-
+        //this.pic = 'data:image/jpeg;base64,' + data
+        alert(data);
+        //loader.dismiss();
       })
       .catch(error => {
-
-        console.log(error.status);
-        console.log(error.error); // error message as string
-        console.log(error.headers);
+        alert("Error");
+        //loader.dismiss();
 
       });
 

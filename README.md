@@ -1,2 +1,1 @@
-# ionic-masquerade
-# ionic-masquerade
+# masquerade-ionic

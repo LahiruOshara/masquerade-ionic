@@ -22,6 +22,11 @@ import {AngularFireModule } from 'angularfire2';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 
+//tabs
+import {ProfilePage} from '../pages/profile/profile';
+import {CameraPage} from '../pages/camera/camera';
+import {SettingsPage} from '../pages/settings/settings'
+
 const firebaseConfig = {
   apiKey: "AIzaSyA1aY3IPoLyXIer22lO9StLP8GFUUFoaao",
   authDomain: "masquerade-5944f.firebaseapp.com",
@@ -35,7 +40,8 @@ const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    StartpagePage
+    StartpagePage,
+    ProfilePage,CameraPage,SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,9 @@ const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    StartpagePage
+    StartpagePage,
+    ProfilePage,CameraPage,SettingsPage
+
   ],
   providers: [
     StatusBar,

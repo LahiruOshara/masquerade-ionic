@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)='takePhoto()'>Capture</button>
+  <button ion-button round color="dark" (click)="pickPhoto()">Get photo</button>
+  <button ion-button round color="secondary" (click)="uploadImage()" >Upload Photo</button>
+
+  <p align="center"><img src="{{ pic }}"></p>
+
+</ion-content>

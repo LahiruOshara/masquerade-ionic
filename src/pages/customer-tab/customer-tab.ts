@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CustomerTabPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {ProfilePage} from '../profile/profile';
+import {CameraPage} from '../camera/camera';
+import {SettingsPage} from '../settings/settings'
 
 @IonicPage()
 @Component({
@@ -14,6 +10,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'customer-tab.html',
 })
 export class CustomerTabPage {
+  tab1Root = ProfilePage;
+  tab2Root = CameraPage;
+  tab3Root = SettingsPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

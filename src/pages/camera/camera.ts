@@ -76,13 +76,13 @@ export class CameraPage {
     loader.present();
     this.http.post('http://192.168.8.100:5000/upload', { "the_file": this.img, "product_id": 2 }, {})
       .then(data => {
-        //this.pic =  data.data;
+        this.pic = data.data;
         this.base64ToGallery.base64ToGallery(this.pic).then(
           res => console.log('Saved image to gallery ', res),
           err => console.log('Error saving image to gallery ', err)
         );
         alert("Success");
-        loader.dismiss()
+        loader.dismiss();
 
       })
       .catch(error => {

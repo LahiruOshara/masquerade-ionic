@@ -21,6 +21,7 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/base64-to-gallery": "^4.17.0",
     "@ionic-native/camera": "^4.16.0",
     "@ionic-native/core": "~4.15.0",
     "@ionic-native/file": "^4.17.0",
@@ -63,7 +64,8 @@
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-file": {},
       "cordova-plugin-advanced-http": {},
-      "cordova-plugin-firebase": {}
+      "cordova-plugin-firebase": {},
+      "cordova-base64-to-gallery": {}
     },
     "platforms": [
       "android"

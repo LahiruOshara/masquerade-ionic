@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { StartpagePage } from '../pages/startpage/startpage';
 
 //adding camera module
@@ -27,6 +26,9 @@ import {ProfilePage} from '../pages/profile/profile';
 import {CameraPage} from '../pages/camera/camera';
 import {SettingsPage} from '../pages/settings/settings'
 
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyA1aY3IPoLyXIer22lO9StLP8GFUUFoaao",
   authDomain: "masquerade-5944f.firebaseapp.com",
@@ -39,7 +41,6 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     StartpagePage,
     ProfilePage,CameraPage,SettingsPage
   ],
@@ -52,7 +53,6 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     StartpagePage,
     ProfilePage,CameraPage,SettingsPage
 
@@ -61,7 +61,8 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Camera,FileTransfer, File,HTTP,FirebaseServiceProvider
+    Camera,FileTransfer, File,HTTP,FirebaseServiceProvider,
+    Base64ToGallery
   ]
 })
 export class AppModule {}

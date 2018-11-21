@@ -15,6 +15,7 @@ export class CameraPage {
 
   pic: any;
   img: any;
+  path:any;
 
   constructor(public navCtrl: NavController,
     private camera: Camera,
@@ -78,12 +79,14 @@ export class CameraPage {
       .then(data => {
         this.pic = data.data;
         this.base64ToGallery.base64ToGallery(this.pic).then(
-          res => console.log('Saved image to gallery ', res),
+          (res)=>{
+            loader.dismiss();
+            this.path=res;
+            alert("Success");
+          },
           err => console.log('Error saving image to gallery ', err)
         );
-        alert("Success");
-        loader.dismiss();
-
+        
       })
       .catch(error => {
 
